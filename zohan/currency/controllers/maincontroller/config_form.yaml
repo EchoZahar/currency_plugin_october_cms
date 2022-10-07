@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Main Controller
+
+# Model Form Field configuration
+form: $/zohan/currency/models/maincontroller/fields.yaml
+
+# Model Class name
+modelClass: Zohan\Currency\Models\MainController
+
+# Default redirect location
+defaultRedirect: zohan/currency/maincontroller
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: zohan/currency/maincontroller/update/:id
+    redirectClose: zohan/currency/maincontroller
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: zohan/currency/maincontroller
+    redirectClose: zohan/currency/maincontroller
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
