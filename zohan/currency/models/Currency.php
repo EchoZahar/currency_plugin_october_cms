@@ -1,13 +1,14 @@
 <?php namespace Zohan\Currency\Models;
 
 use Model;
+use October\Rain\Database\Traits\Validation;
 
 /**
  * Currency Model
  */
 class Currency extends Model
 {
-    use \October\Rain\Database\Traits\Validation;
+    use Validation;
 
     /**
      * @var string table associated with the model
@@ -27,7 +28,11 @@ class Currency extends Model
     /**
      * @var array rules for validation
      */
-    public $rules = [];
+    public $rules = [
+        'name' => ['required', 'string', 'min:2', 'max:100'],
+        'code' => ['required', 'string', 'max:3'],
+        'symbol' => ['required']
+    ];
 
     /**
      * @var array Attributes to be cast to native types

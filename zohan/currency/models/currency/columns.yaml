@@ -6,3 +6,15 @@ columns:
     id:
         label: ID
         searchable: true
+
+    name:
+        label: 'Country name'
+        searchable: true
+
+    code:
+        label: 'country code'
+        searchable: true
+
+    symbol:
+        label: 'symbol currency'
+

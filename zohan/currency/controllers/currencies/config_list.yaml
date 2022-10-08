@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/zohan/currency/models/maincontroller/columns.yaml
+list: $/zohan/currency/models/currency/columns.yaml
 
 # Model Class name
-modelClass: Zohan\Currency\Models\MainController
+modelClass: Zohan\Currency\Models\Currency
 
 # List Title
-title: Manage Main Controllers
+title: Manage Currencies
 
 # Link URL for each record
-recordUrl: zohan/currency/maincontroller/update/:id
+recordUrl: zohan/currency/currencies/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

@@ -4,9 +4,9 @@ use BackendMenu;
 use Backend\Classes\Controller;
 
 /**
- * Main Controller Backend Controller
+ * Currencies Backend Controller
  */
-class MainController extends Controller
+class Currencies extends Controller
 {
     public $implement = [
         \Backend\Behaviors\FormController::class,
@@ -26,7 +26,7 @@ class MainController extends Controller
     /**
      * @var array required permissions
      */
-    public $requiredPermissions = ['zohan.currency.maincontroller'];
+    public $requiredPermissions = ['zohan.currency.currencies'];
 
     /**
      * __construct the controller
@@ -35,6 +35,6 @@ class MainController extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Zohan.Currency', 'currency', 'maincontroller');
+        BackendMenu::setContext('Zohan.Currency', 'currency', 'currencies');
     }
 }

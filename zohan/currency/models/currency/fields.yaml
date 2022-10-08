@@ -6,3 +6,19 @@ fields:
     id:
         label: ID
         disabled: true
+        span: left
+
+    name:
+        label: 'Name category'
+        type: text
+        span: left
+
+    code:
+        label: 'Code country'
+        type: text
+        span: left
+
+    symbol:
+        label: 'currency symbol'
+        type: 'text'
+        span: left

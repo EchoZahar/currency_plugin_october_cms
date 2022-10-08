@@ -3,28 +3,28 @@
 # ===================================
 
 # Record name
-name: Main Controller
+name: Currency
 
 # Model Form Field configuration
-form: $/zohan/currency/models/maincontroller/fields.yaml
+form: $/zohan/currency/models/currency/fields.yaml
 
 # Model Class name
-modelClass: Zohan\Currency\Models\MainController
+modelClass: Zohan\Currency\Models\Currency
 
 # Default redirect location
-defaultRedirect: zohan/currency/maincontroller
+defaultRedirect: zohan/currency/currencies
 
 # Create page
 create:
     title: backend::lang.form.create_title
-    redirect: zohan/currency/maincontroller/update/:id
-    redirectClose: zohan/currency/maincontroller
+    redirect: zohan/currency/currencies/update/:id
+    redirectClose: zohan/currency/currencies
 
 # Update page
 update:
     title: backend::lang.form.update_title
-    redirect: zohan/currency/maincontroller
-    redirectClose: zohan/currency/maincontroller
+    redirect: zohan/currency/currencies
+    redirectClose: zohan/currency/currencies
 
 # Preview page
 preview:

@@ -1,1 +1,8 @@
 1.0.1: First version of Currency
+
+1.0.2:
+    - "Add migration, rename controller MainController to Currencies."
+    - "Run command: "
+    - "php artisan zohan:uploadcurrencies"
+    - "This command uploaded all currencies."
+    - create_currencies_table.php

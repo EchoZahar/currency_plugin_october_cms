@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">#id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Code</th>
+                    <th scope="col">Symbol</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for currency in currencies %}
+                <tr>
+                    <th scope="row">{{ currency.id }}</th>
+                    <td>{{ currency.name }}</td>
+                    <td>{{ currency.code }}</td>
+                    <td>{{ currency.symbol }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

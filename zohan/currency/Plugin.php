@@ -2,17 +2,14 @@
 
 use Backend;
 use System\Classes\PluginBase;
+use Zohan\Currency\Console\UploadDataCurrency;
 
 /**
  * Plugin Information File
  */
 class Plugin extends PluginBase
 {
-    /**
-     * Returns information about this plugin.
-     *
-     * @return array
-     */
+
     public function pluginDetails()
     {
         return [
@@ -23,49 +20,25 @@ class Plugin extends PluginBase
         ];
     }
 
-    /**
-     * Register method, called when the plugin is first registered.
-     *
-     * @return void
-     */
     public function register()
     {
-
+        $this->registerConsoleCommand('zohan.uploadcurrencies', UploadDataCurrency::class);
     }
 
-    /**
-     * Boot method, called right before the request route.
-     *
-     * @return void
-     */
     public function boot()
     {
 
     }
 
-    /**
-     * Registers any front-end components implemented in this plugin.
-     *
-     * @return array
-     */
     public function registerComponents()
     {
-        return []; // Remove this line to activate
-
         return [
-            'Zohan\Currency\Components\MyComponent' => 'myComponent',
+            'Zohan\Currency\Components\Currency' => 'currency',
         ];
     }
 
-    /**
-     * Registers any backend permissions used by this plugin.
-     *
-     * @return array
-     */
     public function registerPermissions()
     {
-        return []; // Remove this line to activate
-
         return [
             'zohan.currency.some_permission' => [
                 'tab' => 'Currency',
@@ -74,22 +47,24 @@ class Plugin extends PluginBase
         ];
     }
 
-    /**
-     * Registers backend navigation items for this plugin.
-     *
-     * @return array
-     */
     public function registerNavigation()
     {
-        return []; // Remove this line to activate
-
         return [
             'currency' => [
-                'label'       => 'Currency',
-                'url'         => Backend::url('zohan/currency/mycontroller'),
+                'label'       => 'Show currency',
+                'url'         => Backend::url('zohan/currency/currencies'),
                 'icon'        => 'icon-leaf',
                 'permissions' => ['zohan.currency.*'],
                 'order'       => 500,
+
+                'sideMenu' => [
+                    'posts' => [
+                        'label' => 'Currencies',
+                        'icon' => 'icon-copy',
+                        'url' => Backend::url('zohan/currency/currencies'),
+                        'permissions' => ['zohan.currency.*'],
+                    ],
+                ]
             ],
         ];
     }
